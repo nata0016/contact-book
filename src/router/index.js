@@ -1,4 +1,4 @@
-import { createRouter, createWebHistory } from 'vue-router'
+import { createRouter, createWebHashHistory } from 'vue-router'
 import ContactList from '../components/ContactList.vue'
 import ContactDetail from '../components/ContactDetail.vue'
 import ContactForm from '../components/ContactForm.vue'
@@ -11,6 +11,10 @@ const routes = [
   { path: '/:pathMatch(.*)*', redirect: '/' }
 ]
 
-export default createRouter({ history: createWebHistory(), routes })
+export default createRouter({
+  history: createWebHashHistory(),
+  routes
+})
+
 
 
